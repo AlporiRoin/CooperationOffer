@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperation offer - Gold Key</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .main {
+            position: relative;
+
+            width: 600px;
+            height: 1180px;
+
+            overflow: hidden;
+
+            background-color: #F1F1F1;
+
+            outline: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        .contacts-block {
+            position: absolute;
+
+            top: 20px;
+            right: 0;
+
+            width: 394px;
+            height: 90px;
+
+            background-color: #797979;
+
+            opacity: .4;
+
+            font-family: 'Sen', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .phone {
+            position: relative;
+
+            display: block;
+
+            width: 123px;
+
+            margin-top: 23px;
+            left: 233px;
+
+            color: white;
+        }
+        .email {
+            position: relative;
+
+            display: block;
+
+            width: 140px;
+
+            margin-top: 5px;
+            left: 214px;
+
+            color: white;
+        }
+        .subplate {
+            position: absolute;
+
+            width: 206px;
+            height: 30px;
+
+            top: 111px;
+            left: 0;
+
+            text-align: center;
+
+            background: linear-gradient(270deg, #E5A494 0%, #F9D3CA 100%);
+        }
+        .subplate::before {
+            content: '';
+
+            position: absolute;
+
+            right: 0;
+            bottom: 0;
+
+            border-top: 30px solid rgba(0, 0, 0, 0);
+            border-right: 7.5px solid white;
+        }
+        .subplate-text {
+            position: relative;
+
+            font-family: 'Sen', sans-serif;
+            font-weight: 400;
+
+            color: white;
+
+            line-height: 2.3;
+            font-size: 15px;
+        }
+        .icon-block {
+            position: relative;
+
+            width: 257px;
+            height: 90px;
+
+            top: 20px;
+
+            overflow: hidden;
+
+            filter: drop-shadow(0px 0px 6px rgba(0,0,0,0.5));
+
+            display: flex;
+        }
+        .icon-block::before {
+            content: '';
+
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(241.79deg, #E0E0E0 -1.23%, #FFFFFF 100%);
+            border-radius: inherit;
+
+            transform: skewX(-12.7deg);
+            transform-origin: 100% 0%;
+        }
+        .icon-block__img {
+            position: relative;
+
+            margin-top: 21px;
+            margin-left: 51px;
+
+        }
+        .icon-block__text {
+            position: relative;
+
+            font-family: 'Sen', sans-serif;
+            font-weight: 400;
+            font-size: 26px;
+
+            color: #505050;
+
+            margin-top: 28px;
+            margin-left: 15px;
+
+        }
+        .icon-block__text h {
+            display: block;
+
+            line-height: 22px;
+        }
+        .addresing {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            margin-top: 120px;
+        }
+        .addresing h {
+            font-family: 'Sen', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            color: #505050;
+        }
+        .addresing span {
+            color: #D77962;
+        }
+        .proppos__first-part {
+            position: relative;
+
+            width: 500px;
+
+            margin-top: 30px;
+            margin-left: 50px;
+            margin-right: 50px;
+
+            text-align: center;
+
+            font-family: 'Sen', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+
+            color: #505050;
+        }
+        .proppos__first {
+            margin-bottom: 15px;
+
+            display: block;
+        }
+        .proppos__second {
+            margin-top: 15px;
+        }
+        #pictures-block {
+            position: relative;
+
+            width: 400px;
+            height: 200px;
+
+            filter: drop-shadow(0px 0px 15px #00000099);
+
+            margin-left: auto;
+            margin-right: 0px;
+            margin-top: 64px;
+        }
+        #pictures-block__content {
+            position: relative;
+
+            display: inline-block;
+
+            width: 400px;
+            height: 200px;
+
+            background-image: url(https://i.postimg.cc/G2wNfd7B/pexels-binyamin-mellish-1396122.jpg);
+            background-position: center;
+            background-repeat: inherit;
+            background-size: 100%;
+
+            clip-path: polygon(12.7% 0, 100% 0, 100% 100%, 0% 100%);
+            -webkit-clip-path: polygon(12.7% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        .proppos__second-part {
+            position: relative;
+
+            width: 500px;
+
+            margin-top: 64px;
+            margin-left: 50px;
+            margin-right: 50px;
+
+            text-align: center;
+
+            font-family: 'Sen', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+
+            color: #505050;
+        }
+        .proppos-second__first {
+            margin-bottom: 15px;
+
+            display: block;
+        }
+        .proppos-second__second {
+            margin-top: 15px;
+        }
+        .offer-block {
+            position: relative;
+
+            width: 564px;
+            height: 173px;
+
+            filter: drop-shadow(0px 0px 15px #00000099);
+
+            margin-top: 64px;
+        }
+        .offer-block__content {
+            position: relative;
+
+            display: inline-block;
+
+            width: 564px;
+            height: 173px;
+
+            background: linear-gradient(270deg, #D77962 0%, #EEB9AD 100%);
+
+            clip-path: polygon(0 0, 100% 0, 92.7% 100%, 0% 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 92.7% 100%, 0% 100%);
+
+            text-align: center;
+            
+        }
+        .offer-block__content h {
+            position: relative;
+
+            font-size: 18px;
+            font-family: 'Sen', sans-serif;
+
+            line-height: 22px;
+            
+            color: white;
+
+            top: 54px;
+        }
+        .performance {
+            position: relative;
+
+            width: 100%;
+
+            text-align: center;
+        }
+        .performance h {
+            position: relative;
+
+            font-size: 18px;
+            font-family: 'Sen', sans-serif;
+            font-weight: bold;
+            
+            line-height: 22px;
+            
+            color: #505050;
+
+            top: 64px;
+        }
+        .performance span {
+            color: #D77962;
+        }
+    </style>
+    <div class="main" >
+        <div class="contacts-block" >
+            <h class="phone" >8 ( 995 ) 430 56 30</h>
+            <h class="email" >gold.key@internet.ru</h>
+        </div>
+        <div class="subplate" >
+            <h class="subplate-text" >ОПТОВАЯ КОМПАНИЯ</h>
+        </div>
+        <div class="icon-block" >
+            <div class="icon-block__img" >
+                <img src="https://i.postimg.cc/tg284Nwt/Union.png" >
+            </div>
+            <div class="icon-block__text" >
+                <h>GOLD</h>
+                <h>KEY</h>
+            </div>
+        </div>
+        <div class="addresing" >
+            <h>Уважаемая <span>Оксана Васильевна</span>!</h>
+        </div>
+        <div class="proppos__first-part" >
+            <h class="proppos__first" >Наша компания занимается оптовой поставкой метиза от <br> отечественных и зарубежных производителей. </h>
+            <h class="proppos__second" >Мы наладили эффективную внутреннюю логистику компании и<br> снабжаем более ста розничных магазинов и строительных<br> компаний.</h>
+        </div>
+        <div id="pictures-block" >
+            <div id="pictures-block__content" ></div>
+        </div>
+        <div class="proppos__second-part" >
+            <h class="proppos-second__first" >Мы имеем собственный склад с широким ассортиментом<br> строительных материалов и заключённые договора об их<br> бесперебойном восполнении. </h>
+            <h class="proppos-second__second" >Мы работаем с огромным множеством транспортных компаний,<br> что позволяет нам отправлять товар в кратчайшие сроки, по<br> самой низкой для вас цене.</h>
+        </div>
+        <div class="offer-block">
+            <div class="offer-block__content" >
+                <h>Предлагаем вам сотрудничество с целью оптовых<br> поставок метиза и мелких строительных<br> материалов</h>
+            </div>
+        </div>
+        <div class="performance">
+            <h>С почтением, ваш личный менеджер - <span>Кирилл</span></h>
+        </div>
+    </div>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet">
+
+</body>
+</html>
